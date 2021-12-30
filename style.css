@@ -1,0 +1,198 @@
+
+/* - Mobile: 375px
+- Desktop: 1440px */
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+/*========== VARIABLES CSS ==========*/
+:root {
+  /*========== Colors ==========*/
+  --soft-blue: hsl(215, 51%, 70%);
+  --cyan: hsl(178, 100%, 50%);
+  --main-BG: hsl(217, 54%, 11%);
+  --card-BG: hsl(216, 50%, 16%);
+  --line: hsl(215, 32%, 27%);
+  --white: hsl(0, 0%, 100%)
+
+  /*========== Font and typography ==========*/
+  --title-font: ;
+  --body-font: 'Outfit', sans-serif;
+  --biggest-font-size: 8rem;
+  --bigger-font-size: 5.6rem;
+  --big-font-size: 4rem;
+  --h2-font-size: 2rem;
+  --h3-font-size: 1.8rem;
+  --normal-font-size: 1.5rem;
+  --small-font-size: 1.3rem;
+  --smaller-font-size: 1.2rem;
+  --text-line-height: 3.2rem;
+
+  /*========== Font weight ==========*/
+  --font-thin: 300;
+  --font-medium: 500;
+  --font-semi-bold: 600;
+}
+
+/*========== BASE ==========*/
+body {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  color: var(--soft-blue);
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--main-BG);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--title-color);
+  font-family: var(--title-font);
+}
+
+h2,h3{
+    color: var(--white);
+    font-size: var(--h3-font-size);
+}
+
+/* Container */
+
+.container{
+    width: 35rem;
+    background-color: var(--card-BG);
+    border-radius: 1rem;
+    padding: 2.4rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.container .equilibrium img{
+    width: 100%;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+
+.container .equilibrium{
+    position: relative;
+}
+
+.equilibrium .equilibrium-overlay{
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 255, 255, 0.408);
+    border-radius: 1rem;
+    overflow: hidden;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.equilibrium:hover .equilibrium-overlay{
+    cursor: pointer;
+    display: flex;
+}
+
+.equilibrium .equilibrium-overlay img{
+    width: 4.8rem;
+}
+
+.content{
+    border-bottom: 1px solid var(--line);
+}
+
+.content > * {
+    margin: 2.4rem 0;
+}
+
+.equilibrium{
+    margin-top: 0;
+}
+
+.content .heading{
+   color: white;
+   font-weight: 600;
+   font-size: 2rem;
+}
+
+.container .heading:hover{
+    color: var(--cyan);
+    cursor: pointer;
+}
+
+.content .text{
+    color: var(--soft-blue);
+    line-height: 2.7rem;
+    font-size: 1.8rem;
+}
+
+.content > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.eth-quantity, .eth-time{
+    display: flex;
+    align-items: center;
+}
+
+.eth-icon, .eth-time{
+    margin-right: 1rem;
+}
+
+.eth-quantity{
+    color: var(--cyan);
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    margin-top: 1.6rem;
+}
+
+.user .user-img{
+    width: 3.2rem;
+    height: 3.2rem;
+    border-radius: 50%;
+    margin-right: 1rem;
+}
+
+.user .text span{
+    color: white;
+}
+
+.user .text span:hover{
+    color: cyan;
+    cursor: pointer;
+}
+
+.attribution{
+    margin-top: 3rem;
+}
+
+/*  Breakpoints: 320 480 768-tablet 1024-laptop 1280-retina 1366 1440 1660 1920  */
+/*========== RESPONSIVE TYPOGRAPHY ==========*/
+@media screen and (min-width: 968px) {
+  :root {
+    --biggest-font-size: 12rem;
+    --bigger-font-size: 7.2rem;
+    --big-font-size: 6.4rem;
+    --h2-font-size: 2.4rem;
+    --h3-font-size: 2rem;
+    --normal-font-size: 1.6rem;
+    --small-font-size: 1.4rem;
+    --smaller-font-size: 1.3rem;
+  }
+}
